@@ -7,5 +7,6 @@
 - jq-slideBox  slideBox轮播图，典型的轮播图
 
     ![jq-slideBox效果图](/img/jq-slideBox.png)
+    
 - jq-slide-4 阴阳师4张图片一起轮播
     ![jq-slide-4效果图](/img/jq-slide-4.png)
