@@ -1,5 +1,5 @@
 # jq-slideshow-components
-
+收集了自己用过的一些jq插件，有部分修改了源码，使调用更加灵活，希望对你有所帮助
 - jq-marquee jq marquee 无缝滚动 整屏滚动
     ![jq-marquee效果图](/img/jq-marquee.png)
 - jq-marquee-up 一条公告 向上滚动模式
