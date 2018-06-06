@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字上下滚动轮播</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .marquee {
+            position: relative;
+            /*width: 600px;*/
+            height: 40px;
+            /*border: 1px solid red;*/
+            overflow: hidden;
+        }
+
+        /*ul {*/
+            /*position: absolute;*/
+            /*left: 0;*/
+            /*top: 0;*/
+            /*width: 600px;*/
+            /*height: auto;*/
+        /*}*/
+
+        .marquee li {
+            /*width: 600px;*/
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            color: #333;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+<div style="margin-top: 50px;">
+
+    <ul class="marquee" style="top: 0px;">
+        <li>
+            <a href="/website/contents/2/1081.html" target="_blank">
+                <span>成都市2017年度社会组织评估等级结果公告 &emsp;</span>
+                <span>2018-01-15</span>
+
+            </a>
+        </li><li>
+        <a href="/website/contents/2/119.html" target="_blank">
+            <span>成都市民政局关于部分环路命名的公告 &emsp;</span>
+            <span>2017-05-31</span>
+
+        </a>
+    </li><li>
+        <a href="/website/contents/2/120.html" target="_blank">
+            <span>成都市民政局关于14条道路1条地下人行通道4座地铁站命名的公示 &emsp;</span>
+            <span>2017-05-08</span>
+
+        </a>
+    </li><li>
+        <a href="/website/contents/2/121.html" target="_blank">
+            <span>成都市民政局关于低保对象家庭基本生活消费支出调查监测项目比选公告 &emsp;</span>
+            <span>2017-04-13</span>
+
+        </a>
+    </li><li>
+        <a href="/website/contents/2/122.html" target="_blank">
+            <span>环路命名答网友问 &emsp;</span>
+            <span>2017-03-21</span>
+
+        </a>
+    </li></ul>
+
+
+</div>
+<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+<script>
+    function lunbo(id, height) {
+        var ul = $(id);
+        var liFirst = ul.find('li:first');
+        $(id).animate({ top: height })
+            .animate({ "top": '30px' }, 0, function () {
+            var clone = liFirst.clone();
+            $(id).append(clone);
+            liFirst.remove();
+        })
+    }
+
+    setInterval("lunbo('ul','-50px')", 3000)
+</script>
+</body>
+</html>
